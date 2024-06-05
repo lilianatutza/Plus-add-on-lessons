@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    select{
+      display: block;
+      padding: 5px; 8px;
+      border-radius: 4px;
+    min-width: 150px; 
+    margin: 15px; 0;   
+  }
+  </style>
+</head>
+<body>
+  Challenge 1
+Create a select element inside a form with 5 fruits as an option and label "What is your favorite fruit?"
+<br>
+<div>
+<label for="fruit">What is your favorite fruit?</label>
+<select name="fruits" id="fruit">
+<option value="banana">🍌 Banana</option>
+<option value="apple">🍎 Apple</option>
+<option value="grape">🍇 Grape</option>
+<option value="kiwi">🥝 Kiwi</option>
+<option value="Strawberies">🍓Strawberries</option>
+</select>
+</div>
+Challenge 2
+Create a select element with the 3 primary colors, when the user selects red, alert the emoji ❤️, when the user selects blue, alert the emoji 💙 and the the user selects yellow, alert 💛. Include an empty option which is selected by default.
+
+<div>
+  <label for="colour">What is your favorite primary colour?</label>
+  <select name="colour" id="colour">
+    <option value="">Select a colour</option>
+  <option value="💖"> Red </option>
+  <option value="💙"> Blue </option>
+  <option value="💛"> Yellow </option> 
+  </select>
+  </div>
+
+  <script>
+
+    function showSelectedColour(event) {
+     alert(event.target.value) 
+    }
+     colourSelect= document.querySelector("#colour");
+   colourSelect.addEventListener("change", showSelectedColour);
+   
+ </script>
+</body>
+
+</html>
