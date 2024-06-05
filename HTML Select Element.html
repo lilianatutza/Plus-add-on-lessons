@@ -44,7 +44,10 @@ Create a select element with the 3 primary colors, when the user selects red, al
   <script>
 
     function showSelectedColour(event) {
-     alert(event.target.value) 
+      if (event.target.value.lenght > 0) {
+        
+        }
+     alert(event.target.value);
     }
      colourSelect= document.querySelector("#colour");
    colourSelect.addEventListener("change", showSelectedColour);
