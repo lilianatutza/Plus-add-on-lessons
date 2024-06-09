@@ -29,20 +29,21 @@
     <div id="milliseconds">👉 Current milliseconds here 👈</div>
 
     <script>
-      function displayDate() {
-      let date = document.querySelector("#date");
-  
-      date.innerHTML = new Date();
-      }
-function displayMilliseconds() {
-let milliseconds = document.querySelector("#milliseconds");
-milliseconds.innerHTML = Date.now();
- 
+      function showCurrentDate() {
+  let dateElement = document.querySelector("#date");
+
+  dateElement.innerHTML = new Date();
 }
-displayDate();
-     setInterval(displayMilliseconds, 1) 
-     setInterval(displayDate, 5000)
+
+function showCurrentMilliseconds() {
+  let millisecondsElement = document.querySelector("#milliseconds");
+  let currentDate = new Date();
+  millisecondsElement.innerHTML = currentDate.getMilliseconds();
+}
+
+setTimeout(showCurrentDate, 5000);
+
+setInterval(showCurrentMilliseconds, 1);
     </script>
-    
   </body>
 </html>
