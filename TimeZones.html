@@ -24,25 +24,31 @@
       following this format "10 years from now, it will be Friday, October 8,
       2033 11:43 AM in Paris France"
     </p>
-    <div id="future-date">👉 Date here 👈</div>
+    <div id="futureDate">👉 Date here 👈</div>
 
     <h3>Challenge 4</h3>
     <p>Display the local time zone here</p>
-    <div id="local-time-zone">👉 Time zone here 👈</div>
+    <div id="local">👉 Time zone here 👈</div>
 
-    <div id="tokyo"></div>
-   <script>
-let TokyoTimme = moment().tz("Asia/Tokyo").format("dddd, MMMM D,YYYY HH:mm");
-let tokyoElement = document.querySelector("#tokyo");
-tokyoElement.innerHTML=TokyoTimme;
-   </script>
+ 
 
    <script>
     let currentDateTime = moment().tz("Pacific/Honolulu").format("[It is ]dddd, MMMM D,YYYY HH:mm");
     let currentDateElement = document.querySelector("#currentDate");
     currentDateElement.innerHTML = currentDateTime;
-   </script>
 
-  </body>
+
+    
+ 
+    let futureDateTime =moment(). add(10, "years").tz("Europe/Paris").format("[10 years from now, it will be ]dddd, MMMM D,YYYY HH:mm")
+    let futureDateElement = document.querySelector("#futureDate");
+    futureDateElement.innerHTML = futureDateTime;
+
+    let localTimeZones = moment.tz.guess();
+    let localElement = document.querySelector("#local")
+ localElement.innerHTML = `Your curent time zone is ${localTimeZones}`;
+
+  </script>
+</body>
 </body>
 </html>
