@@ -14,9 +14,9 @@
     <label for="country"></label>
     <select name="country" id="country">
       <option value="">Select a city</option>
-    <option value="💖"> Paris FR </option>
-    <option value="💙"> Tokyo JP</option>
-    <option value="💛"> Sydney AU </option> 
+    <option Paris="country" id="country1"> Paris FR</option>
+    <option Tokyo="country"> Tokyo JP</option>
+    <option Sydney="country"> Sydney AU </option> 
     </select>
     </div>
 
@@ -31,23 +31,7 @@
       }
        countrySelect= document.querySelector("#country");
      countrySelect.addEventListener("change", showSelectedCountry);
-     
-  
-     function showCountry(event) {
-    if (event.target.value === "blue") {
-      alert("💙");
-    }
-  
-    if (event.target.value === "yellow") {
-      alert("💛");
-    }
-  
-    if (event.target.value === "red") {
-      alert("❤️");
-    }
-  }
-  
-  let countrysSelect = document.querySelector("#country");
+     let countrysSelect = document.querySelector("#country");
   countrySelect.addEventListener("change", showCountry);
   
   
