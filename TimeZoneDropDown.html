@@ -13,7 +13,7 @@
     <display:block></display:block>
     padding:5px, 8px;
     border-radius: 4 px;
-    min-width: 200px;
+    min-width: 150px;
     margin: 15px 0;
     }
 </style>
@@ -22,30 +22,30 @@
 <body>
   <div>
    <select name="" id="countries">
-<option value="france">France FR</option>
-<option value="tokyo">Tokyo JP</option>
-<option value="sydney">Sydney AU</option>
+<option value="paris">Paris 🇫🇷</option>
+<option value="tokyo">Tokyo 🇯🇵</option>
+<option value="sydney">Sydney 🇦🇺</option>
 
    </select>
 
   </div>
-<script>
+  <script>
     function showSelectedCountry(event) {
       if (event.target.value.length > 0) {
-        if (event.target.value === "france") {
-          alert("Bonjour!");
+        if (event.target.value === "paris") {
+          alert( moment().tz("Europe/Paris"). format("[It is] dddd, MMM D, YYYY h:mm A [in Europe/Paris]"));
         }
         if (event.target.value === "tokyo") {
-          alert("Konichiwa!");
+          alert(moment().tz("Asia/Tokyo"). format("[It is] dddd, MMM D, YYYY h:mm A [in Asia/Tokyo]"));
         }
         if (event.target.value === "sydney") {
-          alert("Hi!");
+          alert(moment().tz("Australia/Sydney"). format("[It is] dddd, MMM D, YYYY h:mm A [in Australia/Sydney]"));
         }
       }
     }
 
     let countriesSelect = document.querySelector("#countries");
     countriesSelect.addEventListener("change", showSelectedCountry);
-  </script>
+</script>
 </body>
 </html>
