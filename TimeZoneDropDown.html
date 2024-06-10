@@ -8,33 +8,44 @@
 
 
   <title>TimeZoneDropDown</title>
+  <style> 
+    select{
+    <display:block></display:block>
+    padding:5px, 8px;
+    border-radius: 4 px;
+    min-width: 200px;
+    margin: 15px 0;
+    }
+</style>
+
 </head>
 <body>
   <div>
-    <label for="country"></label>
-    <select name="country" id="country">
-      <option value="">Select a city</option>
-    <option Paris="country" id="country1"> Paris FR</option>
-    <option Tokyo="country"> Tokyo JP</option>
-    <option Sydney="country"> Sydney AU </option> 
-    </select>
-    </div>
+   <select name="" id="countries">
+<option value="france">France FR</option>
+<option value="tokyo">Tokyo JP</option>
+<option value="sydney">Sydney AU</option>
 
+   </select>
 
-    <script>
-
-      function showSelectedCountry(event) {
-        if (event.target.value.lenght > 0) {
-          
-          }
-       alert(event.target.value);
+  </div>
+<script>
+    function showSelectedCountry(event) {
+      if (event.target.value.length > 0) {
+        if (event.target.value === "france") {
+          alert("Bonjour!");
+        }
+        if (event.target.value === "tokyo") {
+          alert("Konichiwa!");
+        }
+        if (event.target.value === "sydney") {
+          alert("Hi!");
+        }
       }
-       countrySelect= document.querySelector("#country");
-     countrySelect.addEventListener("change", showSelectedCountry);
-     let countrysSelect = document.querySelector("#country");
-  countrySelect.addEventListener("change", showCountry);
-  
-  
-   </script>
+    }
+
+    let countriesSelect = document.querySelector("#countries");
+    countriesSelect.addEventListener("change", showSelectedCountry);
+  </script>
 </body>
 </html>
