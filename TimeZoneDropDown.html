@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+
+
+  <title>TimeZoneDropDown</title>
+</head>
+<body>
+  <div>
+    <label for="country"></label>
+    <select name="country" id="country">
+      <option value="">Select a city</option>
+    <option value="💖"> Paris FR </option>
+    <option value="💙"> Tokyo JP</option>
+    <option value="💛"> Sydney AU </option> 
+    </select>
+    </div>
+
+
+    <script>
+
+      function showSelectedCountry(event) {
+        if (event.target.value.lenght > 0) {
+          
+          }
+       alert(event.target.value);
+      }
+       countrySelect= document.querySelector("#country");
+     countrySelect.addEventListener("change", showSelectedCountry);
+     
+  
+     function showCountry(event) {
+    if (event.target.value === "blue") {
+      alert("💙");
+    }
+  
+    if (event.target.value === "yellow") {
+      alert("💛");
+    }
+  
+    if (event.target.value === "red") {
+      alert("❤️");
+    }
+  }
+  
+  let countrysSelect = document.querySelector("#country");
+  countrySelect.addEventListener("change", showCountry);
+  
+  
+   </script>
+</body>
+</html>
